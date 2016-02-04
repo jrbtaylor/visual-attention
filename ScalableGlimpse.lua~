@@ -101,7 +101,7 @@ function ScalableGlimpse:updateOutput(inputTable)
    return self.output
 end
 
-function ScalableGlimpse:updateGradInput(inputTable, gradOutput)
+function SpatialGlimpse:updateGradInput(inputTable, gradOutput)
    local input, location, scale = unpack(inputTable)
    local gradInput, gradLocation, gradScale = unpack(self.gradInput)
    input, location, scale = self:toBatch(input, 3), self:toBatch(location, 1), self:toBatch(scale, 1)
